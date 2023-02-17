@@ -1,0 +1,17 @@
+<h1>Listado de Posts</h1>
+<mat-card-actions>
+  <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
+</mat-card-actions>
+<hr />
+<br />
+
+<div
+  fxLayout="row wrap"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px"
+>
+  <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let post of posts">
+    <app-post-tarjeta [post]="post"></app-post-tarjeta>
+  </div>
+</div>
